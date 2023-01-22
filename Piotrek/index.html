@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <section>
+        <img src="img/parallax/niebo.png" id="sky">
+        <img src="img/parallax/gwiazdy z czanrym.png" id="moon" alt="">
+        <img src="img/parallax/skały w tle.png" id="rocks" alt="skaly">
+        <div class="boss">
+            <img src="img/boss.png" id="boss" alt="">
+        </div>
+        <img src="img/parallax/most.png" id="bridge" alt="">
+        <h1 class="hear">Why do I hear <i>boss music</i>?</h1>
+        <img src="img/parallax/wizard.png" id="wizard" alt="">
+        <a href="#sec" id="btn" onclick="start(), play()">Listen</a>
+        <img src="img/parallax/rocks.png" id="" alt="">
+
+    </section>
+    <div class="sec" id="sec">
+        <header>
+            <a href="#" class="logo">
+                PWBOSS
+            </a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <button id="mute" onclick="mute(), fadeOut()"><i class="fa-solid fa-volume-xmark"></i></button>
+
+        
+        <div class="read">
+            <h2>TURN IT ON</h2><br>
+            <p>And feel <i>like a boss</i></p>
+        </div>
+        <ul class="menu">
+            <div class="toggle"><i class="fa-solid fa-plus"></i></div>
+            <li style="--i:2;--clr:#04fc43"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            <li style="--i:3;--clr:#fe00f1"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li style="--i:4;--clr:#00b0fe"><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+            <li style="--i:5;--clr:#fea600"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
+    
+    
+        
+    
+        <audio id="audioPlayer" src="audio/5 beat better.wav" loop></audio>
+        <div class="circle"></div>
+        <img src="img/pw.png" id="pw" alt="">
+        <h1 class="h1">BOSS BEAT MAKER</h1>
+        <img id="sun" src="img/sun.png" alt="">
+        <div class="hypers">
+            <img src="https://i.kym-cdn.com/photos/images/original/001/852/407/036.gif" alt="">
+            <img src="https://i.kym-cdn.com/photos/images/original/001/852/407/036.gif" alt="" style="transform: scaleX(-1)">
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script/script.js"></script>
+</body>
+</html>

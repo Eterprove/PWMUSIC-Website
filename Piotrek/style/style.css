@@ -1,0 +1,403 @@
+@font-face {
+    font-family: shrimp;
+    src: url(SHRIMP.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: shrimp;
+
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(#2b1055,#7597de);
+    overflow: hidden;
+}
+
+/* HEADER */
+
+header{
+    opacity: 0;
+}
+
+header.active{
+    top: 50vw;
+    position: absolute;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    animation: header 1s ease-in both;
+    animation-delay: 1s;
+}
+@keyframes header {
+    from {
+        top: 45vw;
+        opacity: 0;
+    }
+    to {
+        top: 50vw;
+        opacity: 1;
+    }
+}
+header .logo{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+
+}
+header ul li a:hover
+{
+    background: #fff;
+    color: #2b1055;
+}
+section{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+
+}
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#380A2E,transparent);
+    z-index: 1000;
+}
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+#moon{
+    mix-blend-mode: screen;
+}
+#bridge{
+    z-index: 2;
+}
+#wizard{
+    z-index: 2;
+}
+#btn{
+    position: absolute;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 2vw;
+    z-index: 9;
+    transform: translateY(100px);
+
+}
+#btn.active{
+    opacity: 0;
+}                                     
+.boss{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    margin-top: 33vw;
+    height: 0vw;
+    width: 100%;
+}
+#boss{
+    left: -25vw;
+    opacity: 1;
+    height: 50vw;
+    width: auto;
+    z-index: 1;
+}
+section .hear{
+    position: absolute;
+    left: 10vw;
+    top: 9vw;
+    font-size: 3vw;
+    z-index: 10;
+    color: #fff;
+}
+section .hear.active{
+    opacity: 0;
+}
+.boss img{
+    height: 35vw;
+    width: 20vw;
+}
+/* Sekcja pierwsza */
+section i{
+    color:#D96675
+}
+
+/* Skecja druga */
+
+.sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: linear-gradient(100deg, #380A2E, #D96675);
+    height: 50vw;
+}
+.sec p{
+    font-size: 1.2em;
+    color: #fff;
+}
+.sec #pw{
+    opacity: 0;
+}
+.sec #pw.active{
+    position: absolute;
+    left: 35vw;
+    top: 60vw;
+    height: 45vw;
+    width: auto;
+    z-index: 3;
+    animation: pw 1s ease-in both;
+    animation-delay: 5s;
+
+}
+@keyframes pw {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.h1{
+    opacity: 0;
+}
+.h1.active{
+    left: 18vw;
+    top: 60vw;
+    position: absolute;
+    width: 100%;
+    font-size: 1vw;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    opacity: 1;
+    animation: h1 1s ease-in both;
+    animation-delay: 3s;
+}
+@keyframes h1 {
+    from{
+        opacity: 0;
+        font-size: 1vw;
+    }
+    to{
+        opacity: 1;
+        font-size: 7vw;
+    }
+}
+
+/* Hypers */
+
+.hypers{
+    opacity: 0;
+}
+.hypers img{
+    height: 15vw;
+}
+.hypers.active{
+    top: 86vw;
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 7;
+    opacity: 1;
+    animation: hypers .5s ease-in both;
+}
+@keyframes hypers {
+    from {
+        width: 140vw;
+    }
+    to {
+        width: 100vw;
+    }
+}
+
+
+
+/* CIRCLE */
+
+.circle.active{
+    height: 120vw;
+    width: 120vw;
+    position: absolute;
+    border: 40vw solid #D96675;
+    border-radius: 70vw;
+    left: 5vw;
+    overflow: hidden;
+    animation: circle 1s ease-in both;
+    animation-delay: 3s;
+}
+@keyframes circle {
+	from {
+		border: 10vw solid #D96675;
+        opacity: 0;
+	}
+	to {
+		border: 40vw solid #D96675;
+        opacity: 1;
+	}
+}
+
+/* Read */
+
+.read.active{
+    left: 12vw;
+    position: absolute;
+    height: 100%;
+    width: 25vw;
+    background: linear-gradient(rgba(56, 10, 46, 0.5), rgba(217, 102, 117, 0.5));
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 3vw;
+    padding: 1vw;
+    opacity: 0;
+    animation: read 2s ease-in both;
+    animation-delay: 2s;
+}
+@keyframes read {
+    from {
+        height: 10%;
+        opacity: 0;
+    }
+    to {
+        height: 100%;
+        opacity: 1;
+    }
+}
+.sec h2{
+    opacity: 0;
+}
+.sec h2.active{
+    top: 18vw;
+    width: 45vw;
+    position: absolute;
+    z-index: 5;
+    font-size: 5vw;
+    margin: 1vw;
+    color: #380A2E;
+    animation: read2 1s ease-in both;
+    animation-delay: 4s;
+}
+.sec p{
+    opacity: 0;
+}
+.sec p.active{
+    top: 23vw;
+    width: 45vw;
+    position: absolute;
+    z-index: 5;
+    font-size: 2vw;
+    margin: 1.5vw;
+    color: #fff;
+    animation: read2 1s ease-in both;
+    animation-delay: 4s;
+}
+
+@keyframes read2 {
+    from {
+        left: 5vw;
+        opacity: 0;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+.read i{
+    color:#D96675;
+}
+
+/* MUTE */
+
+#mute{
+    font-size: 2vw;
+    height: 5vw;
+    width: 5vw;
+    border-radius: 3vw;
+    border: 0.5vw solid #fff;
+    top: 53vw;
+    left: 90vw;
+    position: absolute;
+    z-index: 9999;
+    cursor: pointer;
+    color: #fff;
+    background-color: #380A2E;
+    opacity: 0;
+}
+#mute.active{
+    animation: mute 1s ease-in both;
+    animation-delay: 7s;
+}
+@keyframes mute {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+#sun{
+    opacity: 0;
+}
+#sun.active{
+    position: absolute;
+    z-index: 20;
+    height: 5vw;
+    left: 59vw;
+    top: 65vw;
+    animation: sun 1s ease-in both;
+    animation-delay: 5.5s;
+}
+@keyframes sun {
+    from{
+        opacity: 0;
+        top: 55vw;
+    }
+    to{
+        opacity: 1;
+        top: 65vw;
+    }
+}

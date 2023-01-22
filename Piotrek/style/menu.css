@@ -1,0 +1,74 @@
+.menu{
+    top: 80vw;
+    left: 15vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+
+}
+.menu li{
+    position: absolute;
+    left: 0;
+    list-style: none;
+    transition: 0.5s;
+    transform: rotate(0deg) translateX(110px);
+    transform-origin: 7.5vw;
+    transition-delay: calc(0.1s * var(--i));
+    opacity: 0;
+
+}
+.menu.active li{
+    transform: rotate(calc(360deg / 4 * var(--i))) translateX(0px);
+    left: 1.8vw;
+    opacity: 1;
+}
+.menu li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    color: #D96675;
+    background-color: #380A2E;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 1.5em;
+    transform: rotate(calc(360deg / -4 * var(--i)));
+    transition: 1s;
+
+
+}
+.menu li a:hover{
+    transition: 0s;
+    scale: 1.3;
+    
+}
+.menu .toggle{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 0.5vw solid #380A2E;
+    border-radius: 50%;
+    color: #380A2E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10000;
+    font-size: 3vw;
+    transition: transform 1.25s;
+    opacity: 0;
+
+}
+.menu.active .toggle{
+    transform: rotate(315deg);
+    opacity: 1;
+}
+
